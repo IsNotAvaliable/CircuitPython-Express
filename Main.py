@@ -1,9 +1,12 @@
 # Write your code here :-)
-import digitalio
-import board
+from adafruit_circuitplayground import cp
+import time
 
-led = digitalio.DigitalInOut(board.LED)
-led.direction = digitalio.Direction.OUTPUT
-led.value = True
-print("The LED is now on!")
-time.sleep(5)
+    cp.pixels.fill((50, 0, 0))
+
+while True:
+    cp.pixels.brightness = 0.3
+    print ("Neopixel On")
+    time.sleep(0.5)
+    cp.pixels.brightness = 0
+    print ("Neopixel Off")
