@@ -3,10 +3,12 @@ from adafruit_circuitplayground import cp
 import time
 
     cp.pixels.fill((50, 0, 0))
-
-while True:
     cp.pixels.brightness = 0.3
-    print ("Neopixel On")
-    time.sleep(0.5)
-    cp.pixels.brightness = 0
-    print ("Neopixel Off")
+while True:
+    
+    if cp.shake(shake_threshold=20):
+        cp.pixels[0] = (255, 0, 0)
+         print ("Shaking")
+        else
+        cp.pixels[0] = (0, 0, 0)
+         print ("Not Shaking")
