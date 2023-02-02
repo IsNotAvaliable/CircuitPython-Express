@@ -6,5 +6,7 @@ def buttons():
         cp.play_tone(294, 1)
     if cp.button_a:
         cp.play_tone(262, 1)
+    if cp.button_ab:
+        cp.play_tone(150, 3)
 while True:
     buttons()
